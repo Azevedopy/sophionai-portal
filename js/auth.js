@@ -66,8 +66,21 @@ auth.onAuthStateChanged(async (user) => {
         document.body.style.opacity = '1';
         
     } else {
-        if (!isLoginPage) {
-            window.location.href = 'login.html';
+        // Verifica se esta rodando localmente (localhost, 127.0.0.1 ou file:///)
+        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname === '';
+        
+        if (isLocal) {
+            console.warn("⚠️ Ambiente local detectado: Ignorando bloqueio de login.");
+            if (!isLoginPage) {
+                // Injeta dados falsos para você conseguir editar a interface
+                updateUIWithUserData({ nome: "Eros (Local)", plano: "Modo Edição", role: "admin" });
+                document.body.style.opacity = '1';
+            }
+        } else {
+            // Se estiver em produção (GitHub), bloqueia quem não tem login
+            if (!isLoginPage) {
+                window.location.href = 'login.html';
+            }
         }
     }
 });

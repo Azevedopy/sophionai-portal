@@ -18,12 +18,20 @@
                 <div class="logo">Sophion<span>AI</span></div>
                 <span class="client-badge"><i class="fas fa-crown"></i> CLIENTE VIP</span>
             </div>
-            <div class="user-menu">
+            <div class="user-menu" onclick="document.getElementById('user-dropdown').classList.toggle('active')">
                 <div class="user-info">
-                    <div class="user-name">Eros Portela</div>
-                    <div class="user-plan">Plano Intermediário</div>
+                    <div class="user-name">Usuário</div>
+                    <div class="user-plan">Plano Padrão</div>
                 </div>
-                <div class="user-avatar">E</div>
+                <div class="user-avatar">U</div>
+                
+                <!-- Dropdown -->
+                <div class="user-dropdown" id="user-dropdown">
+                    <ul>
+                        <li onclick="window.handlePasswordReset()"><i class="fas fa-key"></i> Alterar senha</li>
+                        <li onclick="window.handleLogout()" class="danger"><i class="fas fa-sign-out-alt"></i> Sair</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>

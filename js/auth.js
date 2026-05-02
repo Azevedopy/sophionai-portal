@@ -169,6 +169,21 @@ window.handleGoogleLogin = async () => {
     }
 };
 
+window.handlePasswordReset = async () => {
+    const user = auth.currentUser;
+    if (user) {
+        try {
+            await auth.sendPasswordResetEmail(user.email);
+            alert("Um link para redefinir sua senha foi enviado para " + user.email);
+        } catch (error) {
+            console.error("Erro ao enviar email de reset:", error);
+            alert("Erro ao enviar e-mail de redefinição. Tente novamente mais tarde.");
+        }
+    } else {
+        alert("Você precisa estar logado para alterar a senha.");
+    }
+};
+
 window.handleLogout = async () => {
     try {
         await auth.signOut();

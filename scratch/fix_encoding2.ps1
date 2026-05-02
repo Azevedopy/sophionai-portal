@@ -1,0 +1,11 @@
+$b=[System.IO.File]::ReadAllBytes("site.html")
+$s=[System.Text.Encoding]::UTF8.GetString($b)
+$cb=[System.Text.Encoding]::GetEncoding(1252).GetBytes($s)
+$cs=[System.Text.Encoding]::UTF8.GetString($cb)
+[System.IO.File]::WriteAllText("site.html", $cs)
+
+$b2=[System.IO.File]::ReadAllBytes("css\style.css")
+$s2=[System.Text.Encoding]::UTF8.GetString($b2)
+$cb2=[System.Text.Encoding]::GetEncoding(1252).GetBytes($s2)
+$cs2=[System.Text.Encoding]::UTF8.GetString($cb2)
+[System.IO.File]::WriteAllText("css\style.css", $cs2)

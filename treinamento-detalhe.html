@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1: Introdução · SophionPro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/portal.css">
+</head>
+<body>
+    <!-- HEADER DO PORTAL -->
+    <header class="portal-header">
+        <div class="container header-content">
+            <div class="logo-area">
+                <div class="logo">Sophion<span>AI</span></div>
+                <span class="client-badge"><i class="fas fa-crown"></i> CLIENTE VIP</span>
+            </div>
+            <div class="user-menu">
+                <div class="user-info">
+                    <div class="user-name">Eros Portela</div>
+                    <div class="user-plan">Plano Intermediário</div>
+                </div>
+                <div class="user-avatar">E</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container portal-grid">
+        <!-- SIDEBAR - navegação -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li class="sidebar-item" onclick="window.location.href='portal.html'"><i class="fas fa-chart-pie"></i> Visão Geral</li>
+                <li class="sidebar-item"><i class="fas fa-search"></i> Diagnóstico</li>
+                <li class="sidebar-item active" onclick="window.location.href='treinamentos.html'"><i class="fas fa-chalkboard-user"></i> Treinamentos</li>
+                <li class="sidebar-item"><i class="fas fa-chart-line"></i> Métricas</li>
+                <li class="sidebar-item"><i class="fas fa-file-alt"></i> Relatórios</li>
+                <li class="sidebar-item"><i class="fas fa-calendar-alt"></i> Próximos passos</li>
+                <li class="sidebar-item"><i class="fas fa-headset"></i> Suporte</li>
+                <li class="sidebar-item"><i class="fas fa-cog"></i> Configurações</li>
+            </ul>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <div class="content-area">
+            <div style="margin-bottom: 24px;">
+                <a href="treinamentos.html" style="color: var(--text-muted); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-arrow-left"></i> Voltar para treinamentos</a>
+            </div>
+
+            <div class="training-viewer-layout">
+                <div class="main-content">
+                    <!-- Video Player -->
+                    <div class="video-container" id="video-container">
+                        <!-- Pseudo-player for visual effect -->
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <h3 style="font-weight: 500;">Aula 1: Introdução</h3>
+                        </div>
+                    </div>
+                    
+                    <h2 class="lesson-title" id="aula-titulo">Carregando aula...</h2>
+                    
+                    <div class="lesson-navigation">
+                        <a href="#" class="btn-nav btn-nav-outline" id="btn-prev" style="opacity: 0.5; pointer-events: none;"><i class="fas fa-arrow-left"></i> Aula anterior</a>
+                        <a href="#" class="btn-nav btn-nav-primary" id="btn-next">Próxima aula <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="lesson-content">
+                        <div id="aula-descricao">
+                            <!-- texto dinamico -->
+                        </div>
+                        <div id="material-complementar">
+                            <!-- material dinamico -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modules-sidebar">
+                    <div class="modules-sidebar-card">
+                        <div class="modules-header">
+                            <h3>Conteúdo do Treinamento</h3>
+                            <p id="progresso-texto">Progresso: 60% concluído</p>
+                        </div>
+                        
+                        <div id="sidebar-modulos">
+                            <!-- JS vai injetar modulos aqui -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER DO PORTAL -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-text">© 2025 SophionPro · Portal do Cliente</p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-question-circle"></i> Central de ajuda</a>
+                <a href="#"><i class="fas fa-comment"></i> Suporte via chat</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- barra inferior fixa para mobile -->
+    <nav class="mobile-bottom-nav">
+        <a href="portal.html"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="fas fa-chart-line"></i></a>
+        <a href="treinamentos.html" class="active"><i class="fas fa-graduation-cap"></i></a>
+        <a href="#"><i class="fas fa-user"></i></a>
+    </nav>
+    <!-- Firebase SDK (Compat Version para funcionar offline/local) -->
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+    <script src="js/auth.js"></script>
+    
+    <!-- JS Scripts para aula dinâmica -->
+    <script src="js/dados-aulas.js"></script>
+    <script src="js/player.js"></script>
+</body>
+</html>

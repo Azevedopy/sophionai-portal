@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Cliente · SophionPro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/portal.css">
+</head>
+<body>
+    <!-- HEADER DO PORTAL -->
+    <header class="portal-header">
+        <div class="container header-content">
+            <div class="logo-area">
+                <div class="logo">Sophion<span>AI</span></div>
+                <span class="client-badge"><i class="fas fa-crown"></i> CLIENTE VIP</span>
+            </div>
+            <div class="user-menu">
+                <div class="user-info">
+                    <div class="user-name">Eros Portela</div>
+                    <div class="user-plan">Plano Intermediário</div>
+                </div>
+                <div class="user-avatar">H</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container portal-grid">
+        <!-- SIDEBAR - navegação -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li class="sidebar-item active" onclick="window.location.href='portal.html'"><i class="fas fa-chart-pie"></i> Visão Geral</li>
+                <li class="sidebar-item"><i class="fas fa-search"></i> Diagnóstico</li>
+                <li class="sidebar-item" onclick="window.location.href='treinamentos.html'"><i class="fas fa-chalkboard-user"></i> Treinamentos</li>
+                <li class="sidebar-item"><i class="fas fa-chart-line"></i> Métricas</li>
+                <li class="sidebar-item"><i class="fas fa-file-alt"></i> Relatórios</li>
+                <li class="sidebar-item"><i class="fas fa-calendar-alt"></i> Próximos passos</li>
+                <li class="sidebar-item"><i class="fas fa-headset"></i> Suporte</li>
+                <li class="sidebar-item"><i class="fas fa-cog"></i> Configurações</li>
+            </ul>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <div class="content-area">
+            <!-- welcome + progresso -->
+            <div class="welcome-card">
+                <div class="welcome-text">
+                    <h2>Olá, Eros! 👋</h2>
+                    <p>Seu diagnóstico está em andamento. Já identificamos 3 pontos de melhoria.</p>
+                </div>
+                <div class="progress-tag">
+                    <i class="fas fa-clock"></i> 60% concluído
+                </div>
+            </div>
+
+            <!-- métricas rápidas -->
+            <div class="dashboard-grid">
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span class="metric-value">-32%</span>
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <div class="metric-label">redução de chamados</div>
+                    <div class="metric-change">vs. mês anterior</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span class="metric-value">78</span>
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="metric-label">NPS atual</div>
+                    <div class="metric-change">+12 pontos</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span class="metric-value">4.2h</span>
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="metric-label">tempo médio de resposta</div>
+                    <div class="metric-change">-1.5h</div>
+                </div>
+            </div>
+
+            <!-- status dos serviços contratados -->
+            <div class="section-title">
+                <h3>Meus serviços</h3>
+                <a href="#" class="view-all">ver todos <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="services-status">
+                <div class="service-item">
+                    <div class="service-icon"><i class="fas fa-search"></i></div>
+                    <div class="service-name">Diagnóstico de Suporte</div>
+                    <div class="service-progress">
+                        <div class="progress-bar" style="width: 80%"></div>
+                    </div>
+                    <div class="service-footer">
+                        <span class="service-status status-inprogress">Em andamento</span>
+                        <a href="#" class="service-action">ver detalhes →</a>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><i class="fas fa-chalkboard-user"></i></div>
+                    <div class="service-name">Treinamento Atendimento</div>
+                    <div class="service-progress">
+                        <div class="progress-bar" style="width: 45%"></div>
+                    </div>
+                    <div class="service-footer">
+                        <span class="service-status status-inprogress">Módulo 3/8</span>
+                        <a href="#" class="service-action">continuar →</a>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+                    <div class="service-name">Dashboard de Métricas</div>
+                    <div class="service-progress">
+                        <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+                    <div class="service-footer">
+                        <span class="service-status status-completed">Ativo</span>
+                        <a href="#" class="service-action">acessar →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- próximos treinamentos / ações -->
+            <div class="section-title">
+                <h3>Próximos treinamentos</h3>
+                <a href="#" class="view-all">agendar <i class="fas fa-calendar-plus"></i></a>
+            </div>
+
+            <div class="training-table">
+                <div class="training-item">
+                    <div class="training-thumb"><i class="fas fa-headset"></i></div>
+                    <div class="training-info">
+                        <h4>Como lidar com clientes difíceis</h4>
+                        <p>Módulo avançado · 2h de duração</p>
+                    </div>
+                    <div class="training-badge">22/05 · 14h</div>
+                    <a href="#" class="training-btn">participar</a>
+                </div>
+                <div class="training-item">
+                    <div class="training-thumb"><i class="fas fa-chart-line"></i></div>
+                    <div class="training-info">
+                        <h4>Análise de métricas para gestores</h4>
+                        <p>Workshop ao vivo · 1h30</p>
+                    </div>
+                    <div class="training-badge">25/05 · 10h</div>
+                    <a href="#" class="training-btn">participar</a>
+                </div>
+                <div class="training-item">
+                    <div class="training-thumb"><i class="fas fa-comments"></i></div>
+                    <div class="training-info">
+                        <h4>Comunicação não-violenta</h4>
+                        <p>Gravação disponível</p>
+                    </div>
+                    <div class="training-badge">gravado</div>
+                    <a href="#" class="training-btn">assistir</a>
+                </div>
+            </div>
+
+            <!-- alertas e notificações -->
+            <div class="alerts-section">
+                <h4><i class="fas fa-bell"></i> Alertas e recomendações</h4>
+                <div class="alert-item">
+                    <div class="alert-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="alert-content">
+                        <div class="alert-title">Seu diagnóstico identificou gargalo no primeiro contato</div>
+                        <div class="alert-time">há 2 dias · recomendamos treinamento específico</div>
+                    </div>
+                    <a href="#" class="alert-action">ver</a>
+                </div>
+                <div class="alert-item">
+                    <div class="alert-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="alert-content">
+                        <div class="alert-title">Revisão mensal de métricas agendada</div>
+                        <div class="alert-time">próxima quarta, 14h</div>
+                    </div>
+                    <a href="#" class="alert-action">confirmar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER DO PORTAL -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-text">© 2025 SophionPro · Portal do Cliente</p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-question-circle"></i> Central de ajuda</a>
+                <a href="#"><i class="fas fa-comment"></i> Suporte via chat</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- barra inferior fixa para mobile -->
+    <nav class="mobile-bottom-nav">
+        <a href="portal.html" class="active"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="fas fa-chart-line"></i></a>
+        <a href="treinamentos.html"><i class="fas fa-graduation-cap"></i></a>
+        <a href="#"><i class="fas fa-user"></i></a>
+    </nav>
+    <!-- Firebase SDK (Compat Version para funcionar offline/local) -->
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

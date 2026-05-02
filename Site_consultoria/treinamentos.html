@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamentos · SophionPro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/portal.css">
+</head>
+<body>
+    <!-- HEADER DO PORTAL -->
+    <header class="portal-header">
+        <div class="container header-content">
+            <div class="logo-area">
+                <div class="logo">Sophion<span>AI</span></div>
+                <span class="client-badge"><i class="fas fa-crown"></i> CLIENTE VIP</span>
+            </div>
+            <div class="user-menu">
+                <div class="user-info">
+                    <div class="user-name">Eros Portela</div>
+                    <div class="user-plan">Plano Intermediário</div>
+                </div>
+                <div class="user-avatar">E</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container portal-grid">
+        <!-- SIDEBAR - navegação -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li class="sidebar-item" onclick="window.location.href='portal.html'"><i class="fas fa-chart-pie"></i> Visão Geral</li>
+                <li class="sidebar-item"><i class="fas fa-search"></i> Diagnóstico</li>
+                <li class="sidebar-item active" onclick="window.location.href='treinamentos.html'"><i class="fas fa-chalkboard-user"></i> Treinamentos</li>
+                <li class="sidebar-item"><i class="fas fa-chart-line"></i> Métricas</li>
+                <li class="sidebar-item"><i class="fas fa-file-alt"></i> Relatórios</li>
+                <li class="sidebar-item"><i class="fas fa-calendar-alt"></i> Próximos passos</li>
+                <li class="sidebar-item"><i class="fas fa-headset"></i> Suporte</li>
+                <li class="sidebar-item"><i class="fas fa-cog"></i> Configurações</li>
+            </ul>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <div class="content-area">
+            <div class="section-title" style="margin-top: 0;">
+                <h3>Meus Treinamentos</h3>
+                <div class="filters">
+                    <select style="padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border-light); outline: none; font-family: inherit; color: var(--primary);">
+                        <option>Todos os treinamentos</option>
+                        <option>Em andamento</option>
+                        <option>Não iniciados</option>
+                        <option>Concluídos</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="training-list">
+                <!-- Training Item 1 -->
+                <div class="training-list-item">
+                    <div class="training-thumb-large" style="background: rgba(197, 160, 89, 0.1); color: var(--accent);">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="training-details">
+                        <div class="training-meta">
+                            <span class="training-category">Módulo Avançado</span>
+                            <span class="training-status" style="color: var(--warning);"><i class="fas fa-clock"></i> 2h restantes</span>
+                        </div>
+                        <h3 class="training-title">Como lidar com clientes difíceis</h3>
+                        <p class="training-desc">Aprenda técnicas de comunicação assertiva e inteligência emocional para reverter situações de conflito no atendimento, transformando clientes insatisfeitos em promotores da marca.</p>
+                        
+                        <div class="training-progress-bar">
+                            <div class="training-progress-track">
+                                <div class="training-progress-fill" style="width: 60%; background: var(--accent);"></div>
+                            </div>
+                            <span class="training-progress-text" style="color: var(--primary);">60%</span>
+                        </div>
+                    </div>
+                    <div class="training-actions">
+                        <a href="treinamento-detalhe.html" class="btn-ver">Ver treinamento</a>
+                    </div>
+                </div>
+
+                <!-- Training Item 2 -->
+                <div class="training-list-item">
+                    <div class="training-thumb-large" style="background: rgba(16, 185, 129, 0.1); color: var(--success);">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="training-details">
+                        <div class="training-meta">
+                            <span class="training-category">Workshop</span>
+                            <span class="training-status" style="color: var(--success);"><i class="fas fa-check"></i> Concluído</span>
+                        </div>
+                        <h3 class="training-title">Análise de métricas para gestores</h3>
+                        <p class="training-desc">Compreenda as principais métricas de atendimento (NPS, CSAT, TME, TMA) e como utilizá-las para guiar a estratégia do seu time de suporte em tempo real e de forma acionável.</p>
+                        
+                        <div class="training-progress-bar">
+                            <div class="training-progress-track">
+                                <div class="training-progress-fill" style="width: 100%; background: var(--success);"></div>
+                            </div>
+                            <span class="training-progress-text" style="color: var(--primary);">100%</span>
+                        </div>
+                    </div>
+                    <div class="training-actions">
+                        <a href="treinamento-detalhe.html" class="btn-revisar">Revisar</a>
+                        <a href="#" class="cert-link"><i class="fas fa-certificate"></i> Certificado</a>
+                    </div>
+                </div>
+
+                <!-- Training Item 3 -->
+                <div class="training-list-item">
+                    <div class="training-thumb-large" style="background: rgba(30, 58, 95, 0.1); color: var(--primary-light);">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="training-details">
+                        <div class="training-meta">
+                            <span class="training-category">Trilha Essencial</span>
+                            <span class="training-status" style="color: var(--text-muted);">Não iniciado</span>
+                        </div>
+                        <h3 class="training-title">Comunicação Não-Violenta (CNV)</h3>
+                        <p class="training-desc">Fundamentos da CNV aplicados ao atendimento ao cliente. Construa relacionamentos empáticos e reduza atritos na comunicação escrita e verbal no primeiro contato com o usuário.</p>
+                        
+                        <div class="training-progress-bar">
+                            <div class="training-progress-track">
+                                <div class="training-progress-fill" style="width: 0%; background: var(--primary-light);"></div>
+                            </div>
+                            <span class="training-progress-text" style="color: var(--text-muted);">0%</span>
+                        </div>
+                    </div>
+                    <div class="training-actions">
+                        <a href="treinamento-detalhe.html" class="btn-ver">Iniciar</a>
+                    </div>
+                </div>
+                
+                <!-- Training Item 4 -->
+                <div class="training-list-item">
+                    <div class="training-thumb-large" style="background: rgba(30, 58, 95, 0.1); color: var(--primary-light);">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="training-details">
+                        <div class="training-meta">
+                            <span class="training-category">Trilha Inovação</span>
+                            <span class="training-status" style="color: var(--text-muted);">Não iniciado</span>
+                        </div>
+                        <h3 class="training-title">IA no Suporte ao Cliente</h3>
+                        <p class="training-desc">Como utilizar ferramentas de Inteligência Artificial para acelerar o atendimento, redigir respostas rápidas e melhorar a eficiência sem perder a humanização e empatia.</p>
+                        
+                        <div class="training-progress-bar">
+                            <div class="training-progress-track">
+                                <div class="training-progress-fill" style="width: 0%; background: var(--primary-light);"></div>
+                            </div>
+                            <span class="training-progress-text" style="color: var(--text-muted);">0%</span>
+                        </div>
+                    </div>
+                    <div class="training-actions">
+                        <a href="treinamento-detalhe.html" class="btn-ver">Iniciar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER DO PORTAL -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-text">© 2025 SophionPro · Portal do Cliente</p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-question-circle"></i> Central de ajuda</a>
+                <a href="#"><i class="fas fa-comment"></i> Suporte via chat</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- barra inferior fixa para mobile -->
+    <nav class="mobile-bottom-nav">
+        <a href="portal.html"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="fas fa-chart-line"></i></a>
+        <a href="treinamentos.html" class="active"><i class="fas fa-graduation-cap"></i></a>
+        <a href="#"><i class="fas fa-user"></i></a>
+    </nav>
+    <!-- Firebase SDK (Compat Version para funcionar offline/local) -->
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
